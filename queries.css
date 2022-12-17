@@ -1,0 +1,69 @@
+/* Media queries dende 300 a 500px*/
+@media only screen and (max-width: 500px) and (min-width: 300px)  {
+
+
+    nav{
+        padding-bottom: 10vh;
+    }
+    body{
+        width: 100vw;
+    }
+
+    #svg {
+        margin-top: 60%;
+        margin-left: 35%;
+        width: 25%;
+    }
+
+    #svg2 {
+        margin-top: 60%;
+        margin-left: 25%;
+    
+    }
+
+    #artres{
+        height: 50vh;
+    }
+
+    #svg3{
+        margin-top: 50%;
+        margin-left: 25%;
+        width: 45%;
+    }
+
+
+
+    #artfinal{
+        height: 10vh;
+    }
+
+    #artfinal ul{
+        display: flex;
+        flex-direction: column;
+        margin-left: 30%;
+    }
+
+    #artfinal ul li{
+        margin-top: 35%;
+        
+    }
+
+
+    #menu span{
+        width: 5%;
+    }
+    #menu{
+        margin-top: 15%;
+        
+    }
+    .line2{
+        
+        margin-top: 2.05%;
+        
+    }
+
+    .line3{
+        margin-top: 4%;
+        
+    }
+}

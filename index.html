@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galegando</title>
+    <!-- Citamos estilos xenéricos (styles.css) e media queries (queries.css)-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="queries.css">
+</head>
+<body>
+    <!-- Inserimos a barra de navegación-->
+    <nav>
+        
+        <ul>
+            <li id="logo"><a href="./index.html">Galegando</a></li>
+        </ul>
+        
+    </nav>
+    <!-- Dividimos o menú en 3 span, isto vainos permitir usar o 'translate' en CSS posteriormente para convertir o menú nunha 'X'-->
+    <div id="menu" class="menu">
+        <span class="line1"></span>
+        <span class="line2"></span>
+        <span class="line3"></span>
+    </div>
+
+    <!-- A continuación o menú que se desprega ao facer 'click'-->
+    <div class="menu2">
+        <ul>
+            <li><a href="./unidades.html">Unidades</a></li>
+            <li><a href="#">Exercicios</a></li>
+            <li><a href="./form.html">Inicia sesión</a></li>
+        </ul>
+    </div>
+    <!-- Empeza o contido principal da páxina, dividido en 'articles'-->
+    <main>
+        <!-- Individualizo por id e creo clases individualizadas (tamén) por un tema de javascript, senon usaría unha clase xeral para todos os artigos-->
+        <article id="artuno" class="artuno">
+            <!--Utilizo span para cambiar a cor posteriormente en CSS-->
+            <h1>Aprende <span>galego</span> pola túa conta!</h1>
+            
+        </article>
+        <article id="artdos" class="artdos">
+            
+            <h2>Ao teu ritmo e de xeito completamente gratuíto.</h2>
+            <img id="svg" src="./images/concept-of-man-got-success-and-achieving-goal.svg" alt="success">
+        </article>
+        <article id="artres" class="artres">
+            <!--Utilizo span para cambiar a cor posteriormente en CSS-->
+            <h2 class="letraoscura">Máis de <span>100 exercicios</span> e <span>50 Unidades</span></h2>
+            <img id="svg2" src="./images/graduating.svg" alt="graduating">
+        </article>
+        <article id="artcuatro" class="artcuatro">
+            <h2>Non agardes máis e accede as nosas leccións e exercicios!.</h2>
+            <img id="svg3" src="./images/learning-concept.png" alt="learning">
+        </article>
+        <!-- Isto podría ir perfectamente nunha etiqueta 'footer', mais decidin mantelo na clase articulo -->
+        <article id="artfinal" class="artfinal">
+            <ul>
+                <li><a href="./unidades.html">Unidades</a></li>
+                <li><a href="#">Exercicios</a></li>
+            </ul>
+        </article>
+
+    </main>
+    <!-- 2 scripts, un xenérico para darlle animación segundo vaias facendo scroll (main.js), outro orientado concretamente a interacción de despregue do menú (menu.js)-->
+    <script src="./main.js"></script>
+    <script src="./menu.js"></script>
+</body>
+</html>

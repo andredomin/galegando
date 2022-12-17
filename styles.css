@@ -1,0 +1,313 @@
+
+/* Importamos a fonte 'Montserrat' con 4 grosores (100,300,400,500) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap');
+
+
+*{
+    /*'Reseteamos' os valores por defecto dos estilos e definimos a familia de fonte*/
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+body{
+    /* Definimos no body un ancho e un alto con viewport o suficientemente amplios para scrollear*/
+    height: 350vh;
+    background-color: rgb(2, 0, 24);
+    width: 100vw;
+}
+
+nav{
+    /* Aplicamos un padding ao navbar, fixamos a barra con position:fixed, top:0 para eliminar espacios entre a barra de navegación e o body, e damoslle prioridad con z-index*/
+    padding: 3%;
+    width: 100vw;
+    background-color: rgb(19, 58, 99);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+ul{
+    /* Aplicamos FlexBox, e colocamos en dirección fila*/
+    display: flex;
+    flex-direction: row;
+}
+
+li{
+    /* Quitamos a decoración das listas, clasificando o seu esilo como 'none' e aplicamos un margin*/
+    list-style: none;
+    margin-left: 2%;
+}
+
+ul li a{
+    /* Quitamos a decoración dos enderezos (subliñado), e asignámoslle unha cor por defecto en whitesmoke*/
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#logo{
+    /* Otorgámoslle unha posición absoluta ao logo e baixámola un 40% do top */
+    position: absolute;
+    top: 40%;
+}
+
+
+
+#menu{
+    /* Corresponde ao ícono do menú hamburguesa, a súa colocación e asignamento de prioridade con z-index e un valor elevado, neste caso 200 */
+    position: absolute;
+    right: 2vw;
+    top: 0%;
+    cursor: pointer;
+    z-index: 200;
+    width: 50px;
+    height: 50px;
+}
+
+#menu span{
+    /* Posicionamos os span do menú hamburguesa en columna (cada unha das liñas), damos unha posición fixa, prioridade con z-index e un despregue atractivo ao cargar a páxina con transform-origin e transition */
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 5%;
+    width: 2%;
+    height: 2px;
+    background-color: whitesmoke;
+    z-index: 100;
+    transform-origin: 0px 100%;
+    transition: all 600ms;
+}
+
+
+/*menú hamburguesa*/
+.line1{
+    /*primeira liña*/
+    margin-top: 0;
+}
+.line2{
+    /*segunda liña*/
+    margin-top: 0.5%;
+}
+.line3{
+    /*terceira liña*/
+    margin-top: 1%;
+}
+.line1active{
+    /* ao facer click  vamos rotar a primeira liña 45 graos e transladala -2px e 2px */
+    transform: rotate(45deg) translate(-2px, 2px);
+}
+.line2active{
+    /* ao facer click facemos desaparecer a segunda liña*/
+    opacity: 0;
+}
+
+.line3active{
+    /* O mesmo que na primeira liña, mas nun sentido inverso, así logramos formar a 'X'*/
+    transform: rotate(-45deg) translate(-4px, 2px);
+}
+
+main{
+    /* Asignamos tamaño ao main*/
+    position: relative;
+    top: 2%;
+    height: 100vh;
+}
+
+/* Tamaño e posicionamento de distintas fontes*/
+h1{
+    
+    font-size: 40px;
+    position: absolute;
+    margin-top: 25%;
+    margin-left: 3%;
+    color: whitesmoke;
+}
+h2{
+    font-weight: 500;
+    position: absolute;
+    background-color: rgba(245, 245, 245, 0.5);
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 5%;
+    width: 50%;
+    padding-top: 0%;
+    color: black;
+}
+
+/* Cambiamos cor co span*/
+span{
+    color: rgb(19, 58, 99);
+}
+
+/* Subdivisión primeira do main*/
+#artuno{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: -20%;
+    animation: primeraAnimacion 2s linear;
+}
+
+/* Isto é o que falamos un día na clase, con este before conseguimos darlle transparencia a imaxe sen alterar directamente todo a contenedor do artigo(o h1 incluído)*/
+#artuno::before{
+    content: "";
+    position: absolute;
+    background: url(./images/img-20160725-114145-largejpg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+/* animación para o scrolling*/
+.animate{
+    /* Animamos de maneira lineal primeraAnimacion (tes o keyframes no final deste css) con retardo de dous segundos*/
+    animation: primeraAnimacion 2s linear;
+}
+
+.menu2{
+    /* Posicionamos con fixed e margins, damos color de fondo e redondeamos bordes con border-radius, damoslle prioridad elevada con z-index e opacidad de 0, esto último débese a que con JavaScript mudaremos a opacidad a 1 para que se despregue con un click no menú hamburguesa*/
+    position: fixed;
+    z-index: 300;
+    top: 10%;
+    margin-left: 80%;
+    background-color: rgb(19, 58, 99);
+    width: 20vw;
+    opacity: 0;
+    border-radius: 15px;
+}
+
+.menu2 ul{
+    /* Usamos FlexBox para direccionar en columna o noso menú despregable*/
+    display: flex;
+    flex-direction: column;
+    
+}
+.menu2 ul li{
+    /*Espaciamos as opcións do menú*/
+    margin-top: 25%;
+    padding: 10%;
+    color: whitesmoke;
+    margin-bottom: 10%;
+    
+}
+
+.menu2 ul li:hover{
+    /* Ao facer hover cambiamos cor de fondo e o cursor a punteiro*/
+    background-color: rgb(10, 30, 52);
+    cursor: pointer;
+}
+
+.menu2 ul li a{
+    /* Alineamos os enderezos*/
+    text-align: center;
+    margin-right: 50%;
+}
+.despliegue{
+    /*Esta é a clase que agregamos con JavaScript para cambiar a opacidade a 1*/
+    animation: primeraAnimacion 1s linear;
+    opacity: 1;
+}
+
+/* Subdivisión segunda do main*/
+#artdos{
+    background-color: whitesmoke;
+    opacity: 0.8;
+    height:50vh;
+    margin-top: 20%;
+}
+
+/* Subdivisión terceira do main*/
+#artres{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: -20%;
+}
+/* Isto é o que falamos un día na clase, con este before conseguimos darlle transparencia a imaxe sen alterar directamente todo a contenedor do artigo(o h2 incluído)*/
+#artres::before{
+    content: "";
+    position: absolute;
+    background: url(./1280px-Flag_of_Galicia.svg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+/* Subdivisión cuarta do main*/
+#artcuatro{
+    background-color: whitesmoke;
+    opacity: 0.8;
+    height:50vh;
+    margin-top: 20%;
+}
+
+/* Cor de letra do h2 do artigo catro*/
+.letraoscura{
+    color: rgb(0, 0, 0);
+}
+
+
+/* Subdivisión final do main*/
+#artfinal{
+    height: 25vh;
+    margin-top: 10%;
+}
+
+/* Os enderezos de Unidades e Exercicios reciben estes estilos xa mencionados */
+#artfinal a{
+    color: whitesmoke;
+    background-color: rgb(19, 58, 99);
+    padding: 20%;
+    border-radius: 5px;
+}
+/* Posicionamento dos botóns Unidades e Exercicios*/
+#artfinal ul{
+    margin-left: 20%;
+}
+
+#artfinal ul li{
+    margin-right: 50%;
+}
+#artfinal a:hover{
+    background-color: whitesmoke;
+    color: rgb(19, 58, 99);
+}
+/* Os distintos debuxos do index reciben posicionamento */
+#svg{
+    width:10%;
+    margin-left: 45%;
+    margin-top: 10%;
+}
+
+#svg2{
+    width: 50%;
+    margin-left: 45%;
+    margin-top: 20%;
+}
+
+#svg3{
+    width:20%;
+    margin-top: 5%;
+    margin-left: 40%;
+}
+/* Damos animación ao scrolling e o menú de despregue con este keyframes */
+@keyframes primeraAnimacion{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+

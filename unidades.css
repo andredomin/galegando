@@ -1,0 +1,127 @@
+/* Importamos estilos xenéricos*/
+@import url(./styles.css);
+/* Asignamos tamaño ao body, fonte de letra etc. e posicionamos*/
+body {
+    height: 200vh;
+    width:90vw;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: rgba(19, 58, 99,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+}
+/* Posicionamos contenedor xenérico*/
+.container{
+    margin-left: 50%;
+    margin-top: -110vh;
+    margin-right: 90%;
+    width: 100px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Posicionamos a tarxeta dentro de contenedor xenérico*/
+.container .card {
+    position: relative;
+    
+}
+/* Damos tamaño e transición a cara da tarxeta*/
+.container .card .cara {
+    width: 200px;
+    height: 200px;
+    transition: 0.7s;
+}
+/* Damos posicionamento e cor de fondo a cara 1 da tarxeta, ademais de priorizala e transladala 160px no eixo Y*/
+.container .card .cara.cara1 {
+    position: relative;
+    background: rgb(19, 58, 99);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(160px);
+}
+
+/* Mudamos cor de fondo e transladamos a 0 no eixo Y ao facer hover na cara 1*/
+.container .card:hover .cara.cara1 {
+    background: #ff0057;
+    transform: translateY(0);
+}
+/* Mudamos cor de fondo e transladamos a 0 no eixo Y ao facer hover na cara 2*/
+.container .card:hover .cara.cara2 {
+    transform: translateY(0);
+    
+}
+/* Cores de fondo para o contido da cara2*/
+.cara.cara2 p,a{
+    background-color: whitesmoke;
+}
+
+
+
+/* Aplica o mencionado arriba para os seguintes estilos (segunda fila de contenedores)*/
+.container2{
+    margin-right: 51.5%;
+    margin-top: 62vh;
+    width: 0px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container2 .card {
+    position: relative;
+}
+
+.container2 .card .cara {
+    width: 200px;
+    height: 200px;
+    transition: 0.7s;
+}
+
+.container2 .card .cara.cara1 {
+    position: relative;
+    background: rgb(19, 58, 99);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(160px);
+}
+
+
+.container2 .card:hover .cara.cara1 {
+    background: #ff0057;
+    transform: translateY(0);
+}
+
+.container .card:hover .cara.cara2 {
+    transform: translateY(0);
+    
+}
+
+.cara.cara2 p,a{
+    background-color: whitesmoke;
+}
+
+.container h3, .container2 h3{
+    color: whitesmoke;
+}
+
+a{
+    text-decoration: none;
+    padding: 5%;
+    background-color: #ff0057;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+
+a:hover{
+    background-color: whitesmoke;
+    color: #ff0057;
+}
+
