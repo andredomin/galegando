@@ -58,9 +58,10 @@ ul li a{
     /* Corresponde ao ícono do menú hamburguesa, a súa colocación e asignamento de prioridade con z-index e un valor elevado, neste caso 200 */
     position: absolute;
     right: 2vw;
-    top: 0%;
+    top: 15%;
+    right: 5%;
     cursor: pointer;
-    z-index: 200;
+    z-index: 800;
     width: 50px;
     height: 50px;
 }
@@ -95,7 +96,7 @@ ul li a{
 }
 .line1active{
     /* ao facer click  vamos rotar a primeira liña 45 graos e transladala -2px e 2px */
-    transform: rotate(45deg) translate(-2px, 2px);
+    transform: rotate(45deg) translate(-5px, 1px);
 }
 .line2active{
     /* ao facer click facemos desaparecer a segunda liña*/
@@ -104,7 +105,7 @@ ul li a{
 
 .line3active{
     /* O mesmo que na primeira liña, mas nun sentido inverso, así logramos formar a 'X'*/
-    transform: rotate(-45deg) translate(-4px, 2px);
+    transform: rotate(-45deg) translate(-5px, 2px);
 }
 
 main{
